@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Csharp_Shop
+namespace Csharp_Shop_2
 {
     internal class Prodotto
     {
@@ -40,7 +40,7 @@ namespace Csharp_Shop
             return iva;
         }
 
-        public void StampaProdotto()
+        public virtual void StampaProdotto()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 

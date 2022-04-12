@@ -33,10 +33,9 @@ namespace Csharp_Shop_2
                 this.grammi = 0;
             }
         }
-        public void Butta()
+        public void Butta(string risposta)
         {
-            string risposta = "";
-
+            
             Console.WriteLine("Vuoi buttare il barattolo?");
 
 

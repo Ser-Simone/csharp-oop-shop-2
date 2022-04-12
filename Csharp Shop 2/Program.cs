@@ -16,13 +16,24 @@ shop3.StampaProdotto();
 
 Acqua MiaAcqua = new Acqua("Acqua", "Acqua Naturale", 0.80, 1.5, 6.8, "Rebruant");
 Acqua.Conversione(1.5);
+Console.ReadKey();
 
-MiaAcqua.Bevi(0.5);
+
+Console.WriteLine("Inserisci i litri da convertire");
+double litri = double.Parse(Console.ReadLine());
+Acqua.Conversione(litri);
+
+Console.ReadKey();
+Console.Clear();
+
+MiaAcqua.Bevi(litri);
 MiaAcqua.Riempi(0.2);
 
 Console.WriteLine("------- PRODOTTO 4--------");
 MiaAcqua.StampaProdotto();
-CiboInScatola MioCibo = new CiboInScatola("Fagioli", "Fagioli Saclà in barattolo", 1.89, 300, 13, "vetro");
+CiboInScatola MioCibo = new CiboInScatola("Fagioli", "Fagioli Saclà in barattolo", 1.89, 300, 13, "vetro \n");
+MioCibo.Mangia(450);
+MioCibo.Butta("no");
 
 Frutta MioSacchetto = new Frutta("Festa", "Sacchetto di frutta", 3.50);
 MioSacchetto.componiSacchetto();
@@ -31,3 +42,4 @@ Console.WriteLine(" \n ------- PRODOTTO 5--------");
 Elettrodomestico MioElettrodomestico = new Elettrodomestico("Frigorigero", "Frigorifero da incasso", 0.5, "Indensit", 18, "Bianco");
 MioElettrodomestico.accensione(1);
 MioElettrodomestico.StampaProdotto();
+

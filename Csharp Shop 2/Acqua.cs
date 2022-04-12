@@ -57,7 +57,6 @@ namespace Csharp_Shop_2
                 {
                     Console.WriteLine("La bottiglia è vuolta" + this.litri);
                 }
-
             }
 
         public static void Conversione(double litri)
@@ -84,6 +83,5 @@ namespace Csharp_Shop_2
             Console.WriteLine("Il ph  è: " + ph);
             Console.WriteLine("la sorgente è: " + sorgente);
         }
-
     }
 }

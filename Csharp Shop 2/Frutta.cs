@@ -13,8 +13,8 @@ namespace Csharp_Shop_2
         
         public Frutta (string nome, string descrizione, double prezzo) : base (nome, descrizione, prezzo)
         {
-            this.listaFrutta = listaFrutta;
-            this.sacchetto = sacchetto;
+           // this.listaFrutta = listaFrutta;
+          //  this.sacchetto = sacchetto;
 
         }
         public void componiSacchetto()
@@ -27,7 +27,7 @@ namespace Csharp_Shop_2
             Console.WriteLine("Scegli di quanti frutti deve essere composto il sacchetto");
             int numFrutto = int.Parse(Console.ReadLine());
 
-            if (numFrutto > 5)
+            while (numFrutto > 5)
             {
                 Console.WriteLine("Non puoi selezionare più di 5 frutti");
                 Console.WriteLine("Scegli di quanti frutti deve essere composto il sacchetto MAX 5 Pezzi");

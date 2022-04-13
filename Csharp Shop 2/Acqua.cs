@@ -10,8 +10,9 @@ namespace Csharp_Shop_2
     internal class Acqua : Prodotto
     {
         private double litri;
-        public double ph;
-        public string sorgente;
+        private readonly double ph;
+        private readonly string sorgente;
+        public static readonly double maxCapienza = 1.5;
 
         public Acqua(string nomeAcqua, string descrizioneAcqua, double prezzoAcqua, double litri, double ph, string sorgente) : base (nomeAcqua, descrizioneAcqua, prezzoAcqua)
             {
@@ -35,44 +36,40 @@ namespace Csharp_Shop_2
 
         public void Riempi(double litriDaRiempire)
         {
-            if (litriDaRiempire > this.litri)
+            if (litriDaRiempire + this.litri > maxCapienza)
             {
                 
                 Console.WriteLine("La bottiglia è piena" + litriDaRiempire);
+                this.litri = maxCapienza;
+                
+            } else if (litriDaRiempire< 0)
+            {
+                Console.WriteLine("non puoi riempire la bottiglia con un valore negativo");
             }
             else
             {
-                Console.WriteLine("glu glu glu, hai riempito la bottiglia");
+                Console.WriteLine("hai riempito la bottiglia");
                 this.litri = this.litri + litriDaRiempire;
             }
         }
-            public void Svuota(double litriDaSvuotare)
+            public void Svuota()
             {
-                if (litriDaSvuotare < this.litri)
-                {
-                    Console.WriteLine("hai svuotato la bottiglia, hai tolto" + litriDaSvuotare);
-                    this.litri = this.litri - litriDaSvuotare;
-                }
-                else
-                {
-                    Console.WriteLine("La bottiglia è vuolta" + this.litri);
-                }
+            this.litri = 0;
             }
 
-        public static void Conversione(double litri)
+        public static void ConversioneLitriGallone(double litri)
         {
-            double gallone = 3.785;
-            double litrig = 0;
+           const double gallone = 3.785;
+            double litriInGallone = 0;
 
             if (litri > 0)
             {
-                litrig = gallone * litri;
-                Console.WriteLine("i tuoi litri sono: " +litrig);
+                litriInGallone = gallone * litri;
+                Console.WriteLine("i tuoi Galloni sono: " +litriInGallone);
             }
-            else
+            else 
             {
-                litrig = litrig / litri;
-                Console.WriteLine("i tuoi litri sono: " +litrig);
+                 Console.WriteLine("Nonn puoi convertire una quantità negativa");
             }
             
         }

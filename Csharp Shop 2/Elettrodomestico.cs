@@ -8,27 +8,24 @@ namespace Csharp_Shop_2
 {
     internal class Elettrodomestico : Prodotto
     {
-        string marca;
-        double kw;
-        string colore;
+        private string marca;
+        private double kw;
+        private string colore;
+        private bool power;
 
         public Elettrodomestico (string nome, string descrizione, double prezzo, string marca, double kw, string colore) : base (nome, descrizione, prezzo)
         {
             this.marca = marca;
             this.kw = kw;
             this.colore = colore;
+            this.power = false;
         }
 
-        public void accensione(int power)
+        public void accensione()
         {
-            if (power == 0)
-            {
+            power = true;
                 Console.WriteLine("Il tuo elettrodomestico è accesso");
-            }
-            else
-            {
-                Console.WriteLine("Il tuo elettrodomestico è spento");
-            }
+          
         }
 
         public override void StampaProdotto()

@@ -11,6 +11,7 @@ namespace Csharp_Shop_2
         private double grammi;
         private double carboidrati;
         private string materiale;
+        public static readonly int MaxCapienza = 300;
 
     
     public CiboInScatola(string nome, string descrizione, double prezzo, double grammi, double carboidrati, string materiale) : base(nome, descrizione, prezzo)

@@ -15,19 +15,19 @@ Console.WriteLine("------- PRODOTTO 3--------");
 shop3.StampaProdotto();
 
 Acqua MiaAcqua = new Acqua("Acqua", "Acqua Naturale", 0.80, 1.5, 6.8, "Rebruant");
-Acqua.Conversione(1.5);
+//Acqua.Conversione(1.5);
 Console.ReadKey();
 
 
-Console.WriteLine("Inserisci i litri da convertire");
+/*Console.WriteLine("Inserisci i litri da convertire");
 double litri = double.Parse(Console.ReadLine());
-Acqua.Conversione(litri);
+Acqua.ConversioneLitriGallone(litri);*/
 
 Console.ReadKey();
 Console.Clear();
 
-MiaAcqua.Bevi(litri);
-MiaAcqua.Riempi(0.2);
+//MiaAcqua.Bevi(litri);
+//MiaAcqua.Riempi(0.2);
 
 Console.WriteLine("------- PRODOTTO 4--------");
 MiaAcqua.StampaProdotto();
